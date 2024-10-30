@@ -56,8 +56,8 @@ function calculateRanks() {
 }
 
 function generateCollectible() {
-  const x = Math.random() * 640; // Assuming you have defined canvasWidth
-  const y = Math.random() * 480; // Assuming you have defined canvasHeight
+  const x = Math.random() * 625; // Assuming you have defined canvasWidth
+  const y = Math.random() * 465; // Assuming you have defined canvasHeight
   return new Collectible(x, y, 10, `c${Date.now()}`);
 }
 

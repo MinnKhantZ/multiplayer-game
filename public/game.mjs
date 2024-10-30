@@ -38,21 +38,21 @@ function handleMovement() {
 }
 
 function render() {
-  context.clearRect(0, 0, canvas.width, canvas.height);
+    context.clearRect(0, 0, canvas.width, canvas.height);
 
-  collectibles.forEach(item => {
-    context.fillStyle = 'red';
-    context.fillRect(item.x, item.y, 10, 10);
-  });
+    collectibles.forEach(item => {
+      context.fillStyle = 'red';
+      context.fillRect(item.x, item.y, 15, 15);
+    });
 
-  for (const id in players) {
-    const player = players[id];
-    context.fillStyle = id === playerId ? 'blue' : 'green';
-    context.fillRect(player.x, player.y, 10, 10);
-    context.fillStyle = 'white';
-    context.fillText(player.rank, player.x, player.y - 5); // Display rank
+    for (const id in players) {
+      const player = players[id];
+      context.fillStyle = id === playerId ? 'blue' : 'green';
+      context.fillRect(player.x, player.y, 30, 30);
+      context.fillStyle = 'white';
+      context.fillText(player.rank, player.x, player.y - 5); // Display rank
+    }
   }
-}
 
 function gameLoop() {
   handleMovement();
